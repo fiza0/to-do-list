@@ -1,0 +1,9 @@
+CREATE TABLE todos (
+    id NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    task VARCHAR2(255) NOT NULL,
+    description VARCHAR2(1000),
+    due_date DATE,
+    status VARCHAR2(50) DEFAULT 'Pending',
+    priority VARCHAR2(20) DEFAULT 'Medium',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
